@@ -1,0 +1,95 @@
+\chapter{Additional Data and Analysis}
+
+\section{Introduction}
+
+This appendix contains supplementary material that supports the main text but is too detailed or lengthy to include in the main chapters.
+
+\section{Detailed Statistical Results}
+
+\subsection{Complete Statistical Output}
+
+Include complete statistical output, additional tables, or detailed calculations that support your main results but are too extensive for the main chapters.
+
+\begin{table}[h]
+\centering
+\caption{Complete correlation matrix}
+\label{tab:correlation_matrix}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Variable} & \textbf{Var1} & \textbf{Var2} & \textbf{Var3} & \textbf{Var4} \\
+\hline
+Var1 & 1.000 & 0.XXX & 0.XXX & 0.XXX \\
+Var2 & 0.XXX & 1.000 & 0.XXX & 0.XXX \\
+Var3 & 0.XXX & 0.XXX & 1.000 & 0.XXX \\
+Var4 & 0.XXX & 0.XXX & 0.XXX & 1.000 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Additional Figures}
+
+Include additional figures that provide supplementary visual information.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.8\textwidth]{figures/supplementary_figure.png}
+\caption{Supplementary analysis results}
+\label{fig:supplementary}
+\end{figure}
+
+\section{Research Instruments}
+
+\subsection{Survey Questionnaire}
+
+If applicable, include the complete survey questionnaire or interview protocol used in your research.
+
+\textbf{Example Survey Questions:}
+
+\begin{enumerate}
+    \item Demographic information:
+    \begin{itemize}
+        \item Age: \_\_\_\_
+        \item Gender: \_\_\_\_
+        \item Education level: \_\_\_\_
+    \end{itemize}
+    
+    \item Research-specific questions:
+    \begin{itemize}
+        \item Question 1: [Your specific question]
+        \item Question 2: [Your specific question]
+        \item Question 3: [Your specific question]
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Interview Protocol}
+
+If you conducted interviews, include your interview guide.
+
+\section{Code Listings}
+
+If your research involves programming or computational work, include relevant code snippets.
+
+\begin{lstlisting}[language=Python, caption=Example data analysis code]
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+# Load data
+data = pd.read_csv('data.csv')
+
+# Perform statistical analysis
+result = stats.ttest_ind(data['group1'], data['group2'])
+print(f"t-statistic: {result.statistic}")
+print(f"p-value: {result.pvalue}")
+\end{lstlisting}
+
+\section{Additional Documentation}
+
+Include any additional documentation that supports your research, such as:
+
+\begin{itemize}
+    \item Ethical approval letters
+    \item Participant consent forms (template)
+    \item Technical specifications
+    \item Detailed methodology descriptions
+\end{itemize}

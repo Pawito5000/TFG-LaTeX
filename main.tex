@@ -1,0 +1,79 @@
+\documentclass[12pt,twoside,openright]{book}
+
+% Essential packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{tocbibind}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Bibliography setup
+\usepackage[style=ieee,backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% Code listing setup
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    frame=single,
+    breaklines=true,
+    showstringspaces=false
+}
+
+% Header and footer setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+
+% Line spacing
+\onehalfspacing
+
+% Document information
+\title{Your Thesis Title Here}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% Front matter
+\frontmatter
+\input{chapters/titlepage}
+\input{chapters/abstract}
+\input{chapters/acknowledgments}
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Main matter
+\mainmatter
+\input{chapters/introduction}
+\input{chapters/literature_review}
+\input{chapters/methodology}
+\input{chapters/results}
+\input{chapters/discussion}
+\input{chapters/conclusion}
+
+% Back matter
+\backmatter
+\printbibliography
+
+% Appendices
+\appendix
+\input{chapters/appendix_a}
+
+\end{document}
