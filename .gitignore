@@ -27,6 +27,9 @@
 *.run.xml
 *.bcf
 
+# Build directory
+build/
+
 # Generated PDFs (uncomment if you want to exclude them)
 # *.pdf
 
