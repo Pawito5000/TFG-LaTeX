@@ -1,1 +1,408 @@
-das
+\documentclass[a4paper, 11pt, twoside]{article}
+\usepackage{wrapfig}
+% \usepackage{abstract}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[a4paper, left=1.15in, right=1.15in, top=1.5in, bottom=1.2in]{geometry}
+\usepackage{float}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz, xcolor}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{textpos}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{lmodern,textcomp}
+\usepackage[catalan]{babel}
+\usepackage{lipsum}
+\usepackage{newfloat}
+\usepackage{listings}
+\usepackage{placeins}
+\usepackage[ruled]{algorithm2e}
+\usepackage{tcolorbox}
+\usepackage[round]{natbib}
+\usepackage[toc,page]{appendix}
+\usepackage{forest}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{quoting,xparse}
+\usepackage{svg}
+
+
+
+% \NewDocumentCommand{\bywhom}{m}{% the Bourbaki trick
+%   {\nobreak\hfill\penalty50\hskip1em\null\nobreak
+%    \hfill\mbox{\normalfont(#1)}%
+%    \parfillskip=0pt \finalhyphendemerits=0 \par}%
+% }
+
+% AIXÒ SERVEIX PER A MODIFICAR UN PROBLEMA AMB ELS CARACTERS --> " + PARAULA 
+
+% \NewDocumentEnvironment{pquotation}{m}
+%   {\begin{quoting}[
+%      indentfirst=true,
+%      leftmargin=\parindent,
+%      rightmargin=\parindent]\itshape}
+%   {\bywhom{#1}
+  
+%   \end{quoting}}
+
+% AIXÒ PER INSERIR FRAGMENTS DE CODI
+
+\lstnewenvironment{code}[1][]%
+{
+   \noindent
+   \minipage{\linewidth}
+   \vspace{0.5\baselineskip}
+   \lstset{
+     basicstyle=\ttfamily\footnotesize,
+     frame=single,
+     breaklines=true,    % Permitir que las líneas se rompan automáticamente
+     breakatwhitespace=true, % Permitir la ruptura en los espacios en blanco
+     #1
+   }
+}
+{\endminipage}
+
+\lstset{
+    language=Java,
+    basicstyle=\ttfamily\small,  % Define el tipo de letra y tamaño del código
+    keywordstyle=\color{blue},   % Define el color de las palabras clave de Java
+    stringstyle=\color{red},     % Define el color de las cadenas de texto
+    commentstyle=\color{green},  % Define el color de los comentarios
+    morecomment=[s][\color{gray}]{/**}{*/},  % Estilo para comentarios de bloque
+    breaklines=true,  % Configura el quiebre automático de línea
+    numbers=left,  % Posición de los números de línea
+    numberstyle=\tiny\color{gray},  % Estilo para los números de línea
+    showspaces=false,  % No mostrar espacios con underscores
+    showstringspaces=false,  % No mostrar espacios dentro de strings
+    frame=single,  % Agregar un marco alrededor del código
+    captionpos=b,  % b = bottom, t = top
+}
+
+\definecolor{eclipseStrings}{RGB}{42,0.0,255}
+\definecolor{eclipseKeywords}{RGB}{127,0,85}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\ttfamily\small,
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+    morestring=[b]"
+}
+
+\lstdefinelanguage{JavaScript}{
+  morekeywords=[1]{break, continue, delete, else, for, function, if, in,
+    new, return, this, typeof, var, void, while, with},
+  % Literals, primitive types, and reference types.
+  morekeywords=[2]{false, null, true, boolean, number, undefined,
+    Array, Boolean, Date, Math, Number, String, Object},
+  % Built-ins.
+  morekeywords=[3]{eval, parseInt, parseFloat, escape, unescape},
+  sensitive,
+  morecomment=[s]{/*}{*/},
+  morecomment=[l]//,
+  morecomment=[s]{/**}{*/}, % JavaDoc style comments
+  morestring=[b]',
+  morestring=[b]"
+}[keywords, comments, strings]
+
+\lstdefinelanguage{svelte}{
+    morekeywords={async, await, then, if, each, in, on, let, const, function, import, export, from, with, typeof, new, var, return},
+    sensitive=true,
+    morecomment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morecomment=[s]{<!--}{-->},
+    morestring=[b]',
+    morestring=[b]",
+    morestring=[b]`,
+    ndkeywords={import, export, return, if, for, while, function, switch, case, break, var, let, const, async, await, then, catch, try, typeof, new, class, extends, implements, interface, constructor, public, private, protected, static, get, set},
+    alsoletter={:},
+    moredelim=**[is][\color{orange}]{\@\{}{\@\}},
+    moredelim=**[is][\color{cyan}]{\$\{}{\}},
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    identifierstyle=\color{black},
+    breaklines=true,
+    basicstyle=\ttfamily\small,
+    columns=fullflexible,
+    showstringspaces=false,
+    tabsize=2,
+    frame=single,
+    captionpos=b,
+}
+
+
+\lstdefinestyle{java}{
+    language=Java,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{gray},
+    morecomment=[s][\color{gray}]{/**}{*/},
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    captionpos=b
+}
+
+\usepackage{color}
+\definecolor{numb}{rgb}{0.58,0,0.82}
+\definecolor{punct}{rgb}{0.3,0.3,0.3}
+\definecolor{delim}{rgb}{0.5,0.5,0.5}
+\definecolor{string}{rgb}{0.6,0.1,0.1}
+
+\lstdefinestyle{json}{
+    language=json,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{string},
+    commentstyle=\color{green},
+    morecomment=[s][\color{gray}]{/**}{*/},
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    captionpos=b
+}
+
+\lstdefinelanguage{drl}{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    morecomment=[s][\color{green}]{/*}{*/},
+    morecomment=[l][\color{green}]{//},
+    morestring=[b]",
+    keywords={rule, when, then, end, salience, eval, update, retract},
+    sensitive=true,
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    captionpos=b
+}
+
+\lstdefinestyle{drl}{
+    language=drl,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    breaklines=true,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    captionpos=b
+}
+
+
+
+\renewcommand{\lstlistingname}{Codi}
+\renewcommand{\lstlistlistingname}{Índex de Fragments de Codis}
+\renewcommand{\appendixpagename}{Annexos}
+\renewcommand{\appendixtocname}{Annexos}
+
+\renewcommand*{\listalgorithmcfname}{Llistat de pseudocodi}
+\renewcommand*{\algorithmcfname}{Pseudocodi}
+\renewcommand*{\algorithmautorefname}{pseudocodi}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.3, 0.0}
+\definecolor{lightgreen}{rgb}{0.9, 0.95, 0.9}
+
+\newcommand{\todo}[1]{
+    \begin{tcolorbox}[colback=lightgreen, colframe=darkgreen, title=TODO]
+        #1
+    \end{tcolorbox}
+}
+
+
+% \usepackage{indentfirst} 
+% \setlength{\parindent}{1cm}
+
+
+\usepackage{parskip}
+% \setlength{\parindent}{10pt}
+
+% \setlength{\headheight}{15.6pt}
+\setlength{\headheight}{16.05263pt}
+
+
+
+
+\vspace{5mm}
+
+\newcolumntype{u}{>{\centering\arraybackslash\hsize=.22\hsize}X}
+\newcolumntype{s}{>{\hsize=.45\hsize}X}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INI creacio subsubsubsecion
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{\hspace{30pt}#1}}
+
+
+\titleclass{\subsubsubsection}{straight}[\subsection]
+
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
+
+\titleformat{\subsubsubsection}
+  {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{5}{10pt}%
+  {3.25ex \@plus1ex \@minus.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{6}{\parindent}%
+  {3.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries}}
+\def\toclevel@subsubsubsection{4}
+\def\toclevel@paragraph{5}
+\def\toclevel@paragraph{6}
+\def\l@subsubsubsection{\@dottedtocline{4}{7em}{4em}}
+\def\l@paragraph{\@dottedtocline{5}{10em}{5em}}
+\def\l@subparagraph{\@dottedtocline{6}{14em}{6em}}
+\makeatother
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIN creacio subsubsubtitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INI creacio equation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareFloatingEnvironment[fileext=loeq,placement={!ht},name=Equació]{equationfloat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIN creacio equation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\section}[block]
+  {\clearpage\normalfont\Large\bfseries}
+  {\thesection}{1em}{}
+
+
+\renewcommand\refname{Bibliografia}
+
+
+\linespread{1.25}
+
+
+\makeatletter
+\renewenvironment{abstract}{%
+    \if@twocolumn
+      \section*{\abstractname}%
+    \else 
+      \begin{center}%
+        {\bfseries \Large\itshape\abstractname\vspace{\z@}}%  % Título en negrita, 14pt y cursiva
+      \end{center}%
+      \quotation
+    \fi}
+    {\if@twocolumn\else\endquotation\fi}
+\makeatother
+
+% \fancypagestyle{main}{
+%     \fancyhf{}
+%     \lhead{\small Aplicació Web per a la Visualització i Comparació
+% de Trajectòries d’Algorismes d’Optimització}
+%     % \rhead{\includegraphics[width=1.2cm]{resources/Icons/logo-fib.png}}
+%     \cfoot{\thepage}
+%     \setlength{\footskip}{35pt}
+% }
+
+\newcommand{\q}[1]{``#1''}
+
+\begin{document}
+
+\hypersetup{
+    pdfborder=0 0 0,
+}
+
+%% PORTADA I TABLE OF CONTENTS %%
+
+%%%%                                   %%%%
+%         INDEX DE LA MEMORIA             %
+%%%%                                   %%%%
+
+% \includepdf[pages=-]{portada_fib.pdf}
+\input{Portada}
+% \cleardoublepage
+
+% \pagestyle{main}
+% \setcounter{page}{11}
+\include{toc}
+% \cleardoublepage
+\input{Descripción de las tareas/main}
+\input{Estimaciones/main}
+\input{Diagrama de Gantt/main}
+
+% \cleardoublepage
+
+% \cleardoublepage
+
+
+% \input{Annex/main}
+
+
+\clearpage
+\bibliographystyle{plainnat}
+% \bibliography{references}
+
+
+%%%%                                   %%%%
+%         FINAL DE LA MEMORIA             %
+%%%%                                   %%%%
+
+\end{document}
+
+
+%% VERSIÓ INCIAL MEMORIA %%
+
