@@ -1,1 +1,40 @@
 \subsection{Estimaciones}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{ID} & \textbf{Tarea} & \textbf{Tiempo} & \textbf{Dependencias} \\
+        \hline
+        \textbf{GP} & \textbf{Gestión del Proyecto} & \textbf{138 h} & \textbf{-} \\
+        \hline
+        GP-1 & Contextualización y alcance & 20 h & - \\
+        GP-2 & Planificación temporal & 15 h & GP-1 \\
+        GP-3 & Gestión económica y sostenibilidad & 18 h & GP-2 \\
+        GP-4 & Entrega final de GEP & 10 h & GP-3 \\
+        GP-5 & Reuniones con el director y el departamento & 6 h & - \\
+        GP-6 & Redacción de la memoria & 45 h & GP-x\footnotemark, BI-x, DP-x\\
+        GP-7 & Presentación de la defensa & 20 h & GP-6 \\
+        GP-8 & Defensa del proyecto & 4 h & GP-7 \\
+        \hline
+        \textbf{BI} & \textbf{Búsqueda e Investigación} & \textbf{50 h} & \textbf{-} \\
+        \hline
+        BI-1 & Estudio de las soluciones existentes & 15 h & - \\
+        BI-2 & Investigación de tecnologías y herramientas & 30 h & - \\
+        BI-3 & Estudio de soluciones alternativas & 5 h & - \\
+        \hline
+        \textbf{DP} & \textbf{Desarrollo del proyecto} & \textbf{351 h} & \textbf{-} \\
+        \hline
+        DP-1 & Obtención de datos de almacenaje & 30 h & - \\
+        DP-2 & Modificación de los plugins de Slurm & 65 h & - \\
+        DP-3 & Obtención de datos de cómputo & 45 h & DP-2 \\
+        DP-4 & Desarrollo del ETL & 120 h & DP-3 \\
+        DP-5 & Desarrollo del Dashboard en OpenOnDemand & 50 h & DP-4 \\
+        DP-6 & Pruebas y validación & 25 h & DP-5 \\
+        DP-7 & Despliegue en entorno productivo & 16 h & DP-6 \\
+        \hline
+    \end{tabular}
+    \caption{Resumen del tiempo aproximado para cada tarea}
+    \label{tab:estimaciones}
+\end{table}
+
+\footnotetext{a excepción de GP-7 y GP-8, porque son tareas posteriores.}\

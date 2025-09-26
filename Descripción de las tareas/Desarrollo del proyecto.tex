@@ -1,15 +1,15 @@
-\subsubsection{Desarrollo del proyecto}\label{ssec:Descripción de las tareas}
+\subsubsection{Desarrollo del proyecto}
 Este bloque engloba las tareas relacionadas con el desarrollo técnico del proyecto. Este bloque
 tendría una duración de unas \textbf{351 horas}. Las tareas son:
 \begin{itemize}
     \item \textbf{DP-1. Obtención de datos de almacenaje:} Esta tarea consiste en desarrollar 
     los scripts necesarios para extraer los datos de uso, en NetApp y MinIO, de los laboratorios
-    y CoreFacilities. Estos datos se deben obtener de forma estructurada para su posterior carga 
+    y Core Facilities. Estos datos se deben obtener de forma estructurada para su posterior carga 
     en BigQuery. Se estima una dedicación de unas \textbf{30 horas}.
     \newline La tarea no tiene dependencias.
     \newline Recursos: \textit {LaTeX, páginas especializadas de documentación y personal del departamento.}
     
-    \item \textbf{DP-2. Modificación de los plugins de Slurm:} Implementación de los \textit{plugins} o modificaiones en el código fuente de Slurm. 
+    \item \textbf{DP-2. Modificación de los plugins de Slurm:} Implementación de los \textit{plugins} o modificaciones  en el código fuente de Slurm. 
     El objetivo es recopilar información adicional 
     sobre la heterogeneidad de arquitecturas de CPU y la disponibilidad de nodos \textit{on spot}, lo cual es crucial para el cálculo preciso de costes. 
     Se estima una dedicación de unas \textbf{65 horas}.
@@ -19,13 +19,13 @@ tendría una duración de unas \textbf{351 horas}. Las tareas son:
     \item \textbf{DP-3. Obtención de datos de cómputo:} Desarrollo del código para extraer los datos de consumo de \textit{jobs} y recursos del clúster HPC 
     a través de Slurm, utilizando la información extendida obtenida en DP-2. Los datos se enviarán a Google BigQuery para su almacenamiento 
     y posterior procesamiento. Se estima una dedicación de unas \textbf{45 horas}.
-    \newline La tarea depende de la tarea GP-2.
+    \newline La tarea depende de la tarea DP-2.
     \newline Recursos: \textit {LaTeX, páginas especializadas de documentación y personal del departamento.}
     
     \item \textbf{DP-4. Desarrollo del ETL:}  Tarea central que incluye: 1) La lógica de Transformación (T) para calcular la imputación proporcional de costes 
     según el uso de \textit{hardware}, utilizando los datos de DP-1 y DP-3. 2) La Carga (L), que es la integración automática de los resultados en el sistema 
     financiero SAP, utilizando el Service Layer (API de SAP Business One). Se estima una dedicación de unas \textbf{120 horas}.
-    \newline La tarea depende de las tareas GP-1, GP-2 y GP-3.
+    \newline La tarea depende de la tarea DP-3.
     \newline Recursos: \textit {LaTeX, páginas especializadas de documentación y personal del departamento.}
     
     \item \textbf{DP-5. Desarrollo del Dashboard en OpenOnDemand:}Implementación del \textit{front-end} de visualización. Creación de una interfaz en Open OnDemand 
@@ -37,7 +37,7 @@ tendría una duración de unas \textbf{351 horas}. Las tareas son:
     \item \textbf{DP-6. Pruebas y validación:} Ejecución exhaustiva de pruebas unitarias, de integración y funcionales. Se validará que la recogida de datos sea correcta,
     que la lógica de cálculo de costes sea precisa y que la imputación final en SAP sea correcta. Se incluye la generación y revisión de los \textit{logs} 
     de ejecución para el control de errores. Se estima una dedicación de unas \textbf{25 horas}.
-    \newline La tarea depende de las tareas DP-4 y DP-5.
+    \newline La tarea depende de la tarea DP-5.
     \newline Recursos: \textit {LaTeX, páginas especializadas de documentación y personal del departamento.}
     
     \item \textbf{DP-7. Despliegue en entorno productivo:} Configuración y puesta en marcha de la solución completa en la máquina virtual Linux, asegurando que el proceso
