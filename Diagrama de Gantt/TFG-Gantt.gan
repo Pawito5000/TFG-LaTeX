@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="TFG-Gantt" company="" webLink="http://" view-date="2025-09-08" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3312" locale="es_ES">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd15" name="Notas" width="20" order="-1"/>
+        <field id="tpd3" name="Nombre" width="200" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="75" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#cc0000 #ff3333 #00cc66 #00ff33 #3300ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="776dd6a12f2e4d9fbdbdb8f2e2f0f62e" name="Gestión del proyecto" color="#3300ff" meeting="false" start="2025-09-16" duration="94" complete="0" expand="true">
+            <task id="1" uid="06e26692ff6e4d8cb90f5cac12ded41e" name="GP-1: Contextualización y alcance" meeting="false" start="2025-09-16" duration="5" complete="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" uid="1b75e5db96714ea9b5901fd6d4144d1f" name="GP-2: Planificación temporal" meeting="false" start="2025-09-23" duration="5" complete="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" uid="2163b2f2fd9b4262924efabf45f13bb6" name="GP-3: Gestión económica y sostenibilidad" meeting="false" start="2025-09-30" duration="5" complete="0" expand="false">
+                <depend id="10" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="10" uid="2404a3a6830a4ba790527192bd2dd97b" name="GP-4: Entrega final de GEP" meeting="false" start="2025-10-07" duration="5" complete="0" expand="true"/>
+            <task id="9" uid="c8b6ce02dbd847d2ae1bd1e5befcb8f0" name="GP-5: Reuniones con el director y el departamento" meeting="false" start="2025-09-16" duration="90" complete="0" expand="true"/>
+            <task id="8" uid="bb7640bbb5064c728513bde590fd1a6b" name="GP-6: Redacción de la memoria" meeting="false" start="2025-09-16" duration="82" complete="0" expand="true">
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="7" uid="740e30425c1245c0a9cae3b2705cce91" name="GP-7: Preparación de la defensa" meeting="false" start="2026-01-08" duration="8" complete="0" expand="true">
+                <depend id="6" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="6" uid="91ccb302aca94be1b05c7479bf685650" name="GP-8: Defensa del proyecto" meeting="false" start="2026-01-20" duration="4" complete="0" expand="true"/>
+        </task>
+        <task id="3" uid="b9c5efb09a09417c94322d3810d1556b" name="Búsqueda e investigación" color="#00ff33" meeting="false" start="2025-09-16" duration="10" complete="0" expand="true">
+            <task id="2" uid="5fca1691c80e4b3b9e086d46ab882c7d" name="BI-1: Estudio de las soluciones existentes" color="#00cc66" meeting="false" start="2025-09-16" duration="3" complete="0" expand="true"/>
+            <task id="14" uid="b88240a964094d25b4ca028179efdb8c" name="BI-2: Investigación de tecnologías y herramientas" color="#00cc66" meeting="false" start="2025-09-19" duration="6" complete="0" expand="true"/>
+            <task id="13" uid="764e7b5f6e1e4a8788058fe2c8a60635" name="BI-3: Estudio de soluciones alternativas" color="#00cc66" meeting="false" start="2025-09-29" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="5" uid="500f5006a86f439a8cdf06648efba1d0" name="Desarrollo del proyecto" color="#ff3333" meeting="false" start="2025-09-30" duration="70" complete="0" expand="true">
+            <task id="4" uid="0bc1496444994cd6afb864ac339b5709" name="DP-1: Obtención de datos de almacenaje" color="#cc0000" meeting="false" start="2025-09-30" duration="5" complete="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="17" uid="bad49a51995e43438c28bc10683d6940" name="DP-2: Modificación de los plugins de Slurm" color="#cc0000" meeting="false" start="2025-10-07" duration="12" complete="0" expand="true">
+                <depend id="16" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="16" uid="5b69392c7fbe4d6f9056c9979ac4a8f2" name="DP-3: Obtención de los datos de cómputo" color="#cc0000" meeting="false" start="2025-10-23" duration="8" complete="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="15" uid="fee79d985fa14ae2a92809ca4d05576b" name="DP-4: Desarrollo del ETL" color="#cc0000" meeting="false" start="2025-11-04" duration="21" complete="0" expand="true">
+                <depend id="18" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="18" uid="e308600fb136470f97013abb61b64aed" name="DP-5: Desarrollo del dashboard" color="#cc0000" meeting="false" start="2025-12-03" duration="14" complete="0" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="19" uid="eea27ed93074428789d5ddd04f994254" name="DP-6: Pruebas y validación" color="#cc0000" meeting="false" start="2025-12-23" duration="5" complete="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="21" uid="49b950960bfa4021bcf7ab713f6ebb0c" name="DP-7: Despliegue en entorno productivo" color="#cc0000" meeting="false" start="2025-12-30" duration="5" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
