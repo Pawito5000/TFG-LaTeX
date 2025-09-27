@@ -1,1 +1,12 @@
 \subsection{Requerimientos funcionales}
+Los requerimientos funcionales de este proyecto son los siguientes:
+
+\begin{itemize}
+    \item El sistema deberá obtener diariamente los datos de consumo de cómputo y almacenamiento de los laboratorios y Core Facilities.
+    \item Ampliación del código fuente de Slurm mediante plugins para recopilar información adicional sobre la heterogeneidad de arquitecturas de CPU y la disponibilidad de nodos on spot.
+    \item Los datos deberán almacenarse en Google BigQuery como base central de análisis.
+    \item La aplicación deberá procesar la información y calcular la imputación proporcional de costes según el uso de hardware y recursos.
+    \item El sistema deberá integrar los resultados en el sistema financiero SAP, utilizando el Service Layer (API de SAP Business One).
+    \item El proceso deberá ejecutarse de manera automática y periódica en una máquina virtual Linux.
+    \item La solución deberá generar registros (logs) de ejecución para garantizar trazabilidad y control de errores.
+\end{itemize}

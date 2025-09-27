@@ -1,1 +1,19 @@
 \subsection{Solución escogida}
+La elección de Slurm es estratégica, ya que es ampliamente adoptado en centros de investigación, universidades y entornos 
+de \textit{scientific computing}\footnote{La Computación Científica o \textit{scientific-computing} es la disciplina que aplica matemáticas, 
+informática y otras ciencias para usar ordenadores y desarrollar software que resuelva problemas complejos mediante modelos matemáticos, 
+simulaciones y análisis de datos.}. En el caso del IRB Barcelona, como fundación sin ánimo de lucro que depende en gran medida de donaciones, 
+resulta clave optimizar los recursos y minimizar los costes asociados a licencias de software, las cuales suelen estar más orientadas 
+al ámbito corporativo. Añadir que al ser una herramienta open source, Slurm ofrece la flexibilidad necesaria para ser modificado y adaptado 
+a las necesidades específicas de cada proyecto, lo que asegura tanto sostenibilidad como escalabilidad en el tiempo.
+
+En cuanto al ERP, en su momento se optó por SAP Business One, principalmente debido a la disponibilidad del \textit{add-on}\footnote{Un \textit{add-on} es 
+un módulo o extensión desarrollado por un tercero que amplía la funcionalidad estándar de un sistema ERP, adaptándolo a requerimientos específicos de una 
+organización o sector.} desarrollado por Seidor, el cual cubre de manera eficiente las necesidades particulares de gestión y administración de una institución 
+de investigación. Esta elección no es aislada, ya que otras organizaciones del mismo ámbito también han adoptado SAP Business One, lo que refuerza la confianza 
+en la robustez de la solución y facilita el intercambio de buenas prácticas y experiencias entre instituciones similares.
+
+Respecto a la infraestructura en la nube, se decidió trabajar con Google Cloud. El principal objetivo fue evitar las limitaciones de escalabilidad
+que presentaría una solución basada en una base de datos, MySQL, en local. Especialmente cuando se requiere manejar un gran volumen de datos y consultas 
+temporales asociadas. Además, el IRB ya contaba con un contrato activo con Google, lo que, al tratarse de una organización sin ánimo de lucro, permite 
+acceder a servicios sin coste adicional.
