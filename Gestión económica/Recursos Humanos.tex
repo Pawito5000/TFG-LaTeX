@@ -1,0 +1,68 @@
+\subsection{Recursos humanos}
+
+Los costes relacionados con los recursos humanos hacen referencia a todo el gasto asociado al salario del personal que participa en el proyecto. 
+En este caso, el proyecto es desarrollado por una única persona, el autor del mismo, pero el papel del autor se divide en varios roles o funciones, 
+cada una de las cuales tiene un coste diferente asociado. Estos roles son los siguientes:
+\begin{itemize}
+    \item  \textbf{Product Owner:} Responsable de la planificación, seguimiento y control del proyecto. Salario anual: 55.000 €
+    \item  \textbf{Ingeniero de datos:} Responsable de la obtención, transformación y carga de los datos. Salario anual: 32.000 €
+    \item  \textbf{Desarrollador:} Responsable de tareas de desarrollo de software, incluyendo el desarrollo y pruebas de código. Salario anual: 29.000 €
+\end{itemize}
+
+Se han estimado un salarios por hora y el coste total para la empreasa de la siguiente manera(base reguladora + IRPF + Seguridad Social):
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Rol} & \textbf{Salario Bruto (hora)} & \textbf{Coste total para la empresa(hora)}\\
+        \hline
+        Product Owner (PO) & 26,44 & 20  € \\
+        Ingeniero de datos (ID) & 15,38 & 15 € \\
+        Desarrollador junior (DJ) & 13,94 & 18  € \\
+        \hline
+    \end{tabular}
+    \caption{Resumen del tiempo aproximado para cada tarea. Elaboración propia.}
+    \label{tab:estimaciones}
+\end{table}
+
+Las aproximaciones salariales obtenidas se han extraido basandose en los datos publicados por el portal \textit{Glassdoor} \cite{glassdoor}, 
+asumiendo una media de 40 horas semanales y 14 pagas anuales. Así como un IRF del 30
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{ID} & \textbf{Tarea} & \textbf{Tiempo} & \textbf{Roles} & \textbf{Roles}\\
+        \hline
+        \textbf{GP} & \textbf{Gestión del Proyecto} & \textbf{138 h} & \textbf{-}  & € \\
+        \hline
+        GP-1 & Contextualización y alcance & 20 h &  PO  & € \\
+        GP-2 & Planificación temporal & 15 h &  PO  & € \\
+        GP-3 & Gestión económica y sostenibilidad & 18 h &  PO  & € \\
+        GP-4 & Entrega final de GEP & 10 h &  PO  & € \\
+        GP-5 & Reuniones con el director y el departamento & 6 h &  PO,ID,DJ  & € \\
+        GP-6 & Redacción de la memoria & 45 h & PO,ID,DJ & € \\
+        GP-7 & Presentación de la defensa & 20 h &  PO  & € \\
+        GP-8 & Defensa del proyecto & 4 h &  PO & € \\
+        \hline
+        \textbf{BI} & \textbf{Búsqueda e Investigación} & \textbf{50 h} & \textbf{-} & € \\
+        \hline
+        BI-1 & Estudio de las soluciones existentes & 15 h & ID,DJ & € \\
+        BI-2 & Investigación de tecnologías y herramientas & 30 h & ID,DJ & € \\
+        BI-3 & Estudio de soluciones alternativas & 5 h & ID,DJ & € \\
+        \hline
+        \textbf{DP} & \textbf{Desarrollo del proyecto} & \textbf{351 h} & \textbf{-} & € \\
+        \hline
+        DP-1 & Obtención de datos de almacenaje & 30 h & ID & € \\
+        DP-2 & Modificación de los plugins de Slurm & 65 h & DJ & € \\
+        DP-3 & Obtención de datos de cómputo & 45 h & ID & € \\
+        DP-4 & Desarrollo del ETL & 120 h & ID & € \\
+        DP-5 & Desarrollo del dashboard & 50 h & DJ & € \\
+        DP-6 & Pruebas y validación & 25 h & DJ & € \\
+        DP-7 & Despliegue en entorno productivo & 16 h & DJ & € \\
+        \hline
+    \end{tabular}
+    \caption{Resumen del tiempo aproximado para cada tarea. Elaboración propia.}
+    \label{tab:estimaciones}
+\end{table}
