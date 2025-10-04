@@ -9,25 +9,25 @@ cada una de las cuales tiene un coste diferente asociado. Estos roles son los si
     \item  \textbf{Desarrollador:} Responsable de tareas de desarrollo de software, incluyendo el desarrollo y pruebas de código. Salario anual: 29.000 €
 \end{itemize}
 
-Se han estimado un salarios por hora y el coste total para la empreasa de la siguiente manera(base reguladora + IRPF + Seguridad Social):
+Se han estimado unos salarios por hora y el coste total para la empreasa de la siguiente manera (base reguladora + IRPF + Seguridad Social):
 
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
-        \textbf{Rol} & \textbf{Salario Bruto (hora)} & \textbf{Coste total para la empresa(hora)}\\
+        \textbf{Rol} & \textbf{Salario Bruto (hora)} & \textbf{Coste para la empresa (hora)}\\
         \hline
-        Product Owner (PO) & 26,44 & 20  € \\
-        Ingeniero de datos (ID) & 15,38 & 15 € \\
-        Desarrollador junior (DJ) & 13,94 & 18  € \\
+        Product Owner (PO) & 26,44 & 35,16 € \\
+        Ingeniero de datos (ID) & 15,38 & 20,46 € \\
+        Desarrollador junior (DJ) & 13,94 & 18,54  € \\
         \hline
     \end{tabular}
-    \caption{Resumen del tiempo aproximado para cada tarea. Elaboración propia.}
+    \caption{Roles del proyecto. Elaboración propia.}
     \label{tab:estimaciones}
 \end{table}
 
 Las aproximaciones salariales obtenidas se han extraido basandose en los datos publicados por el portal \textit{Glassdoor} \cite{glassdoor}, 
-asumiendo una media de 40 horas semanales y 14 pagas anuales. Así como un IRF del 30
+asumiendo una media de 40 horas semanales y 14 pagas anuales. Así como un coste para la empresa del 33\% sobre el salario bruto, que incluye Seguridad Social e IRPF.
 
 \begin{table}[H]
     \centering
@@ -35,34 +35,34 @@ asumiendo una media de 40 horas semanales y 14 pagas anuales. Así como un IRF d
         \hline
         \textbf{ID} & \textbf{Tarea} & \textbf{Tiempo} & \textbf{Roles} & \textbf{Roles}\\
         \hline
-        \textbf{GP} & \textbf{Gestión del Proyecto} & \textbf{138 h} & \textbf{-}  & € \\
+        \textbf{GP} & \textbf{Gestión del Proyecto} & \textbf{138 h} & \textbf{-}  & \textbf{4.319,64 €} \\
         \hline
-        GP-1 & Contextualización y alcance & 20 h &  PO  & € \\
-        GP-2 & Planificación temporal & 15 h &  PO  & € \\
-        GP-3 & Gestión económica y sostenibilidad & 18 h &  PO  & € \\
-        GP-4 & Entrega final de GEP & 10 h &  PO  & € \\
-        GP-5 & Reuniones con el director y el departamento & 6 h &  PO,ID,DJ  & € \\
-        GP-6 & Redacción de la memoria & 45 h & PO,ID,DJ & € \\
-        GP-7 & Presentación de la defensa & 20 h &  PO  & € \\
-        GP-8 & Defensa del proyecto & 4 h &  PO & € \\
+        GP-1 & Contextualización y alcance & 20 h &  PO  & 703,20 € \\
+        GP-2 & Planificación temporal & 15 h &  PO  & 527,40 € \\
+        GP-3 & Gestión económica y sostenibilidad & 18 h &  PO  & 632,88 € \\
+        GP-4 & Entrega final de GEP & 10 h &  PO  & 351,60 € \\
+        GP-5 & Reuniones con el director y el departamento & 6 h &  PO,ID,DJ  & 148,32 € \\
+        GP-6 & Redacción de la memoria & 45 h & PO,ID,DJ & 1.112,40 € \\
+        GP-7 & Presentación de la defensa & 20 h &  PO  & 703,20 € \\
+        GP-8 & Defensa del proyecto & 4 h &  PO & 140,64 € \\
         \hline
-        \textbf{BI} & \textbf{Búsqueda e Investigación} & \textbf{50 h} & \textbf{-} & € \\
+        \textbf{BI} & \textbf{Búsqueda e Investigación} & \textbf{50 h} & \textbf{-} & \textbf{975 €} \\
         \hline
-        BI-1 & Estudio de las soluciones existentes & 15 h & ID,DJ & € \\
-        BI-2 & Investigación de tecnologías y herramientas & 30 h & ID,DJ & € \\
-        BI-3 & Estudio de soluciones alternativas & 5 h & ID,DJ & € \\
+        BI-1 & Estudio de las soluciones existentes & 15 h & ID,DJ & 292,50 € \\
+        BI-2 & Investigación de tecnologías y herramientas & 30 h & ID,DJ & 585,00 € \\
+        BI-3 & Estudio de soluciones alternativas & 5 h & ID,DJ & 97,50 € \\
         \hline
-        \textbf{DP} & \textbf{Desarrollo del proyecto} & \textbf{351 h} & \textbf{-} & € \\
+        \textbf{DP} & \textbf{Desarrollo del proyecto} & \textbf{351 h} & \textbf{-} & \textbf{6.881,94 €} \\
         \hline
-        DP-1 & Obtención de datos de almacenaje & 30 h & ID & € \\
-        DP-2 & Modificación de los plugins de Slurm & 65 h & DJ & € \\
-        DP-3 & Obtención de datos de cómputo & 45 h & ID & € \\
-        DP-4 & Desarrollo del ETL & 120 h & ID & € \\
-        DP-5 & Desarrollo del dashboard & 50 h & DJ & € \\
-        DP-6 & Pruebas y validación & 25 h & DJ & € \\
-        DP-7 & Despliegue en entorno productivo & 16 h & DJ & € \\
+        DP-1 & Obtención de datos de almacenaje & 30 h & ID & 613,80 € \\
+        DP-2 & Modificación de los plugins de Slurm & 65 h & DJ & 1.205,10 € \\
+        DP-3 & Obtención de datos de cómputo & 45 h & ID & 920,70 € \\
+        DP-4 & Desarrollo del ETL & 120 h & ID & 2.455,20 € \\
+        DP-5 & Desarrollo del dashboard & 50 h & DJ & 927,00 € \\
+        DP-6 & Pruebas y validación & 25 h & DJ & 463,50 € \\
+        DP-7 & Despliegue en entorno productivo & 16 h & DJ & 296,64€ \\
         \hline
     \end{tabular}
-    \caption{Resumen del tiempo aproximado para cada tarea. Elaboración propia.}
-    \label{tab:estimaciones}
+    \caption{Estimación de costes de los recursos humanos. Elaboración propia.}
+    \label{tab:estimaciones_humanos}
 \end{table}

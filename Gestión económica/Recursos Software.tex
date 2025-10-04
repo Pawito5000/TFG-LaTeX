@@ -1,1 +1,45 @@
 \subsection{Recursos software}
+La naturaleza de la organización como entidad sin ánimo de lucro impulsa una estrategia 
+rigurosa de optimización de costes, priorizando el uso de soluciones de código abierto 
+(\textit{Open Source}) siempre que sea posible. Este enfoque no solo minimiza el gasto 
+financiero, sino que también fomenta la transparencia y la adaptabilidad técnica del proyecto.
+
+Para la gestión de recursos de computación y planificación de tareas, se ha optado por 
+Slurm, una solución de código abierto ampliamente reconocida en entornos de alto 
+rendimiento. En cuanto a la infraestructura colaborativa, la empresa dispone de un acuerdo 
+para el uso de Google Workspace, lo que permite gestionar la comunicación y la 
+documentación bajo una filosofía de costes reducidos o nulos que se alinea con la estrategia 
+\textit{Open Source}.
+
+Para la infraestructura de datos, se utiliza Google Cloud en su plan Estándar, con 
+almacenamiento y análisis en BigQuery On-Demand. Según la estimación de cargas del 
+proyecto, se prevé un volumen aproximado de:
+\begin{itemize}
+    \item \textbf{Almacenamiento}: 100--200 GB de datos históricos generados por Slurm, lo que implica un coste mensual aproximado de 4 a 8€ (0,02 €/GB/mes).
+    \item \textbf{Consultas}: unos 2 TB procesadas al mes, lo que corresponde a 10 € mensuales (5 €/TB procesado).
+\end{itemize}
+
+En total, se estima un coste global de unos \textbf{20–25 € mensuales}, es decir, alrededor de \textbf{80–100 €} para los 4 meses de duración del proyecto. Se ha imputado un presupuesto fijo de \textbf{100 €} para cubrir holguras en picos de almacenamiento o consultas.
+
+Finalmente, la gestión de tareas se realiza a través de \textbf{Jira}, donde se aprovecha una reducción de precio substancial por el estado non-profit de la empresa.
+
+\begin{table}[H]
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Nombre del recurso} & \textbf{Coste} & \textbf{Vida útil} & \textbf{Coste Horario}\\
+        \hline
+        Google Cloud (BigQuery On-Demand, 4 meses) & 100,00 € & 539 h & 0,186 € \\
+        Jira (3 usuarios, coste reducido) & 50,00 € & 539 h & 0,093 € \\
+        Slurm (Open Source) & 0,00 € & 539 h & 0,000 € \\
+        Google Workspace (Acuerdo non-profit) & 0,00 € & 539 h & 0,000 € \\
+        \hline
+        \multicolumn{3}{|l|}{\textbf{Total horario} (asumiendo los 3 roles)} & \textbf{0,279 €} \\
+        \hline
+        \multicolumn{3}{|l|}{\textbf{Total del proyecto} (asumiendo los 3 roles)} & \textbf{150,00 €} \\
+        \hline
+    \end{tabular}
+    \caption{Coste horario de los recursos software indirectos. Elaboración propia.}
+    \label{tab:recursos_software}
+    \end{center}
+\end{table}
