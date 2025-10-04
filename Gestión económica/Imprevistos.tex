@@ -1,1 +1,30 @@
 \subsection{Imprevistos}
+
+Los imprevistos, a diferencia de las contingencias, son eventos que no se pueden prever ni planificar, pero que pueden afectar al desarrollo del proyecto.
+Es por eso que, previamente en la identificación de riesgos, se han identificado ciertos riesgos que pueden llegar a materializarse y afectar al proyecto.
+Esto, por supuesto, implicaría un coste añadido al tener que disponer del
+personal durante más horas de las prevista
+
+El coste de los imprevistos se calculará de la siguiente manera:
+\begin{align}
+    \text{Coste del riesgo (€)} =\ & \text{Probabilidad de ocurrencia (\%)} \nonumber \\
+    & \times \text{Tiempo de dedicación extra (h)} \nonumber \\
+    & \times \text{Sueldo del rol asociado (€)}
+\end{align}
+En la siguiente tabla se muestran los riesgos que se han considerado:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Riesgo} & \textbf{Probabilidad} & \textbf{Dedicación} & \textbf{Rol} & \textbf{Precio}\\
+        \hline
+        Errores en la transformación de datos & 50\% & 10 h & ID & 175,80 € \\
+        Caída de nodos del clúster HPC & 20\% & 5 h & DJ & 18,54 € \\
+        Errores en la automatización & 30\% & 10 h &  DJ & 55,62€\\
+        \hline
+        \multicolumn{4}{|l|}{\textbf{Total}}  & \textbf{249,96 €} \\
+        \hline
+    \end{tabular}
+    \caption{Estimación de costes por imprevistos. Elaboración propia.}
+    \label{tab:recursos_directos}
+\end{table}
