@@ -27,7 +27,8 @@
 \usepackage{placeins}
 \usepackage[ruled]{algorithm2e}
 \usepackage{tcolorbox}
-\usepackage[round]{natbib}
+% Estilo de citas IEEE sencillo: usar paquete cite para comprimir y ordenar referencias numéricas
+\usepackage{cite}
 \usepackage[toc,page]{appendix}
 \usepackage{forest}
 \usepackage{pdflscape}
@@ -398,9 +399,10 @@
 
 
 \clearpage
-\bibliographystyle{plainnat}
-% \bibliography{references}
-
+% Estilo bibliográfico IEEE
+\bibliographystyle{IEEEtran}
+\renewcommand{\refname}{Referencias}
+\bibliography{references.bib}
 
 %%%%                                   %%%%
 %         FINAL DE LA MEMORIA             %
