@@ -1,8 +1,8 @@
 \subsection{Requerimientos no funcionales}
 A continuación, se detallan los requerimientos no funcionales para el correcto funcionamiento del proyecto: 
 \begin{itemize}
-    \item La aplicación deberá estar programada en Python, siguiendo buenas prácticas de desarrollo y con control de versiones en GitHub.
-    \item El sistema deberá ser escalable, permitiendo la adaptación a un mayor número de usuarios o recursos en el futuro.
-    \item El tiempo de procesamiento diario deberá ser razonable, evitando retrasos en la imputación de costes.
-    \item La solución deberá ser segura, garantizando la integridad de los datos transferidos entre BigQuery y SAP.
+    \item Implementación y Control: La aplicación debe ser desarrollada en Python y debe utilizar GitHub para el control de versiones y el seguimiento de buenas prácticas.
+    \item Escalabilidad: El diseño del sistema debe soportar un incremento del 50\% en el volumen de datos de consumo y un 25\% más de Core Facilities/Laboratorios en los próximos 12 meses sin degradación significativa del rendimiento.
+    \item Rendimiento (Tiempo de Procesamiento): El tiempo total para el proceso ETL y la integración en SAP debe ser razonable.
+    \item Seguridad y Confidencialidad: La comunicación y transferencia de datos entre BigQuery y SAP (vía Service Layer) debe realizarse utilizando conexiones cifradas para garantizar la integridad y confidencialidad de la información financiera.
 \end{itemize}

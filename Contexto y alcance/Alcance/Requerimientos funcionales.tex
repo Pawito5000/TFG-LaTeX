@@ -2,11 +2,10 @@
 Los requerimientos funcionales de este proyecto son los siguientes:
 
 \begin{itemize}
-    \item El sistema deberá obtener diariamente los datos de consumo de cómputo y almacenamiento de los laboratorios y Core Facilities.
-    \item Ampliación del código fuente de Slurm mediante plugins para recopilar información adicional sobre la heterogeneidad de arquitecturas de CPU y la disponibilidad de nodos on spot.
-    \item Los datos deberán almacenarse en Google BigQuery como base central de análisis.
-    \item La aplicación deberá procesar la información y calcular la imputación proporcional de costes según el uso de hardware y recursos.
-    \item El sistema deberá integrar los resultados en el sistema financiero SAP, utilizando el Service Layer (API de SAP Business One).
-    \item El proceso deberá ejecutarse de manera automática y periódica en una máquina virtual Linux.
-    \item La solución deberá generar registros (logs) de ejecución para garantizar trazabilidad y control de errores.
+    \item Recolección Diaria de Datos: El sistema debe obtener y procesar diariamente los datos de consumo (cómputo y almacenamiento) de los laboratorios y Core Facilities.
+    \item Almacenamiento Centralizado: El sistema debe almacenar todos los datos de consumo recopilados en Google BigQuery para su análisis..
+    \item Cálculo de Imputación de Costes: La aplicación debe procesar la información de BigQuery para calcular la imputación proporcional de costes a cada laboratorio, basándose en el uso real del hardware y los recursos.
+    \item Integración con SAP: La aplicación debe integrar automáticamente los resultados del cálculo de costes en el sistema SAP, utilizando la interfaz Service Layer.
+    \item Ejecución Automatizada: El proceso debe ejecutarse de forma automática y periódica en una máquina virtual Linux.
+    \item Trazabilidad (Logging): La aplicación debe generar registros (logs) detallados de cada ejecución para asegurar la trazabilidad y facilitar el control y la corrección de errores.
 \end{itemize}

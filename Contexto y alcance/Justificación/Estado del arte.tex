@@ -5,6 +5,20 @@ Gestión de recursos HPC:
     \item LSF: software propiedad de IBM, no es por tanto open source.
 \end{itemize}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Herramienta} & \textbf{Licencia} & \textbf{Orientación} \\
+        \hline
+        Slurm & Open Source & Investigación, universidades \\
+        LSF & Propietaria (IBM) & Empresas, investigación \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa de gestores de recursos HPC.}
+    \label{tab:gestores_hpc}
+\end{table}
+
 Alternativas de ERP\footnote{Un ERP (Enterprise Resource Planning) es un sistema de software que integra y automatiza 
 los principales procesos de negocio de una empresa, centralizando datos y flujos de trabajo en una única base de datos 
 para mejorar la eficiencia y la toma de decisiones.}:
@@ -13,13 +27,42 @@ para mejorar la eficiencia y la toma de decisiones.}:
     \item Salesforce: orientado principalmente a la gestión de relaciones con clientes (CRM). Aunque permite cierta gestión financiera, no está específicamente diseñado para la imputación de costes internos de HPC.
     \item Oracle ERP\cite{ComoPuedesDotar}: solución robusta y muy extendida en grandes corporaciones, con amplias capacidades de integración, pero con costes elevados y una complejidad de despliegue significativa.
     \item Sage: software de gestión empresarial más orientado a pymes, con funcionalidades contables básicas, pero insuficiente para integrar escenarios complejos como el de HPC.
-
 \end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Plataforma} & \textbf{Ventajas} & \textbf{Limitaciones} \\
+        \hline
+        SAP & Integración, gestión financiera avanzada & Complejidad, coste \\
+        Salesforce & CRM, integración básica & No orientado a HPC \\
+        Oracle ERP & Robustez, integración & Coste elevado, despliegue complejo \\
+        Sage & Simplicidad, orientado a pymes & Funcionalidades limitadas \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa de alternativas ERP.}
+    \label{tab:alternativas_erp}
+\end{table}
 
 Almacenamiento de datos:
 \begin{itemize}
     \item BigQuery: servicio de Google Cloud orientado a análisis de grandes volúmenes de datos. Permite consultas rápidas y escalables, ideal para integrar y transformar datos de uso de HPC y almacenamiento.
     \item Amazon Redshift: alternativa de Amazon Web Services que ofrece capacidades similares de análisis masivo, aunque con una mayor dependencia del ecosistema AWS.
     \item Snowflake: solución de almacenamiento y análisis en la nube que destaca por su flexibilidad multi-cloud, pero que introduce costes de licencia y dependencia tecnológica.
-
 \end{itemize}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Solución} & \textbf{Ventajas} & \textbf{Limitaciones} \\
+        \hline
+        BigQuery & Consultas rápidas, escalabilidad & Dependencia Google Cloud \\
+        Amazon Redshift & Integración AWS, análisis masivo & Dependencia AWS \\
+        Snowflake & Multi-cloud, flexibilidad & Coste de licencia, dependencias \\
+        \hline
+    \end{tabular}
+    \caption{Comparativa de soluciones de almacenamiento de datos.}
+    \label{tab:almacenamiento_datos}
+\end{table}
